@@ -103,3 +103,8 @@ func (c CPF) Format() string {
 	s := c.String()
 	return fmt.Sprintf("%s.%s.%s-%s", s[:3], s[3:6], s[6:9], s[9:])
 }
+
+func (c CPF) Mask() string {
+	s := c.String()
+	return fmt.Sprintf("%s.***.***-%s", s[:3], s[9:])
+}
